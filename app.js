@@ -50,6 +50,7 @@ function select(lesson,play=false,start=0){
  player.pause();selected=lesson;pendingSeek=start>0?start:null;$('player-error').hidden=true;player.src=file.url;player.load();
  $('playing-number').textContent=lesson.id;$('playing-title').textContent=lesson.title;
  $('reading-link').href='reading.html#'+lesson.reading;$('next-button').hidden=lesson.id==='10';
+ $('skill-guide').hidden=lesson.id!=='10';
  document.querySelectorAll('[data-lesson]').forEach(button=>button.setAttribute('aria-current',String(button.dataset.lesson===lesson.id)));
  const title=document.querySelector('.playing-title');title.classList.remove('is-changing');void title.offsetWidth;title.classList.add('is-changing');
  history.replaceState(null,'','#film-'+lesson.id+(start?'&t='+start:''));

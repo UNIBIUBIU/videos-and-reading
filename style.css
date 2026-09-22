@@ -35,3 +35,19 @@
   .watch-main:has(.chapters-section[hidden]) .player-wrap:fullscreen video{max-height:none}
 }
 @media(max-width:780px){.watch-main{padding:18px 12px}.watch-layout{scroll-margin-top:86px}}
+
+.skill-guide{display:flex;align-items:center;justify-content:space-between;gap:20px;flex:none;margin-top:16px;padding:17px 18px;background:rgba(213,43,32,.045);color:var(--ink)}
+.skill-guide:hover{background:rgba(213,43,32,.085);color:var(--ink)}
+.skill-guide h3{font-size:19px;line-height:1.2;font-weight:550;letter-spacing:-.025em}
+.skill-guide p{margin-top:6px;font-size:12px;line-height:1.4;color:var(--muted)}
+.skill-guide p span{margin-left:12px;white-space:nowrap}
+.skill-guide-action{display:flex;align-items:center;gap:12px;flex:none;font-size:13px;color:#a6241c;white-space:nowrap}
+.skill-guide-action svg{width:20px;height:20px}
+.watch-main:has(.skill-guide:not([hidden])) .player-actions{display:none}
+@media(min-width:781px) and (min-height:660px){
+  .watch-main:has(.skill-guide:not([hidden])) .player-wrap video{max-height:min(43dvh,calc(100dvh - 500px))}
+  .watch-main:has(.skill-guide:not([hidden])) .player-wrap:fullscreen video{max-height:none}
+}
+@media(max-width:1100px){.skill-guide{gap:12px;padding:14px}.skill-guide h3{font-size:17px}.skill-guide-action{font-size:12px;gap:7px}.skill-guide p span{display:block;margin:3px 0 0}}
+@media(max-width:780px){.skill-guide{align-items:flex-start;flex-direction:column;gap:14px;margin-top:25px;padding:20px 16px}.skill-guide h3{font-size:21px}.skill-guide-action{font-size:13px}.skill-guide p span{display:inline;margin-left:10px}}
+@media(prefers-reduced-motion:no-preference){.skill-guide{transition:background-color .18s}.skill-guide-action svg{transition:transform .18s}.skill-guide:hover .skill-guide-action svg{transform:translate(2px,-2px)}}
