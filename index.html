@@ -1,37 +1,47 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Videos</title><meta name="description" content="Ten short films about AI models, working environments, agents, Skills and MCP.">
-  <meta name="referrer" content="no-referrer">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='white'/%3E%3Cpath d='M9 6 27 16 9 26Z' fill='%23e52b23'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css"><script type="module" src="app.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build your own AI workflow — Tutorials</title>
+<meta name="description" content="Learn Codex, models, tokens, harnesses, Skills and MCP. Build a custom Skill of your own.">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M7 3 28 16 7 29Z' fill='%23d52b20'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css?v=2"><script type="module" src="app.js?v=2"></script>
 </head>
-<body data-page="videos">
-  <a class="skip-link" href="#main">Skip to videos</a>
-  <div class="shell">
-    <header class="topbar"><nav aria-label="Pages"><a href="./" aria-current="page">Videos<span>01</span></a><a href="reading.html">Reading<span>02</span></a></nav></header>
-    <main id="main">
-      <div class="page-heading"><h1>Videos<span class="red">.</span></h1><p>Models, working environments,<br> and reusable ways of working.</p></div>
-      <div class="section-rule"><span>10 FILMS</span><span>54 MINUTES · ENGLISH</span></div>
-      <section class="access-panel" id="access-panel" aria-labelledby="access-title">
-        <div><span class="eyebrow">START HERE</span><h2 id="access-title">Enter to watch.</h2><p>Use the password provided for these videos.</p></div>
-        <form id="access-form"><label for="password">Password</label><div class="input-row"><input id="password" name="password" type="password" autocomplete="current-password" required><button class="primary" type="submit">Enter <span aria-hidden="true">↗</span></button></div><p id="access-status" role="status" aria-live="polite"></p></form>
-      </section>
-      <section id="player-section" class="watch-layout" hidden aria-label="Video player and chapters">
-        <div class="watch-main">
-          <div class="player-wrap"><video id="player" controls playsinline preload="none" aria-label="Selected teaching video"></video></div>
-          <p id="player-error" class="error" role="alert" hidden>The video could not load. Try reopening this lesson.</p>
-          <div class="playing-title"><div><p id="playing-number" class="eyebrow"></p><h2 id="playing-title"></h2></div><button id="lock-button" class="text-button">Lock videos</button></div>
-          <p id="playing-description" class="lesson-description"></p>
-          <div class="player-actions"><a id="reading-link" href="reading.html">Related reading <span aria-hidden="true">↗</span></a><a id="download-link" href="#" download>Download video <span aria-hidden="true">↓</span></a><button id="next-button" class="text-button">Next film <span aria-hidden="true">→</span></button></div>
-        </div>
-        <aside class="playlist" aria-label="Choose a film"><div class="playlist-heading">CHAPTERS <span>01—10</span></div><div id="playlist"></div></aside>
-      </section>
-      <section class="film-index" id="film-index" aria-labelledby="index-title"><div class="index-heading"><h2 id="index-title">In this collection</h2><p>Start with the working environment.<br>Finish by building a Skill of your own.</p></div><div id="index-list"></div></section>
-      <noscript><p>Please enable JavaScript to unlock and play the videos. The Reading page works without it.</p></noscript>
-    </main>
-    <footer><a href="reading.html">Continue with Reading <span aria-hidden="true">↗</span></a><span>Models / Harness / Skills / MCP</span></footer>
-  </div>
-</body>
-</html>
+<body data-page="tutorials">
+<a class="skip-link" href="#main">Skip to tutorials</a>
+<div class="shell">
+<header class="topbar"><nav aria-label="Pages"><a href="./" aria-current="page">Tutorials</a><a href="reading.html">Reading</a></nav></header>
+<main id="main">
+<div class="hero"><h1>Build your own<br><span class="red">AI workflow.</span></h1><p class="topic-key">Codex · Models · Tokens<br> Harness · Skills · MCP</p></div>
+<section class="access-panel" id="access-panel" aria-labelledby="access-title">
+<h2 id="access-title">Start learning <span class="red">↗</span></h2>
+<form id="access-form"><label class="sr-only" for="password">Password</label><div class="input-row"><input id="password" name="password" type="password" placeholder="Enter password" autocomplete="current-password" required><button class="primary" type="submit">Unlock <span aria-hidden="true">→</span></button></div><p id="access-status" role="status" aria-live="polite"></p></form>
+</section>
+<section id="player-section" class="watch-layout" hidden aria-label="Tutorial player and collection">
+<div class="watch-main">
+<div class="playing-title"><span id="playing-number" class="large-number"></span><h2 id="playing-title"></h2></div>
+<div class="player-wrap" id="player-wrap">
+<video id="player" controls controlslist="nodownload noremoteplayback" disablepictureinpicture playsinline preload="metadata" tabindex="0" aria-label="Tutorial video; press Space to play or pause"></video>
+<button id="play-overlay" class="play-overlay" aria-label="Play tutorial" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3 22 12 7 21Z" fill="currentColor"/></svg></button>
+<div id="player-controls" class="player-controls" hidden>
+<div class="seek-wrap"><input id="seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="Playback position"><div id="seek-marks" class="seek-marks" aria-hidden="true"></div></div>
+<div class="control-row">
+<button id="play-toggle" class="icon-button" aria-label="Play"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="play-icon" d="M7 3 22 12 7 21Z" fill="currentColor"/><path class="pause-icon" d="M6 3h4v18H6zM15 3h4v18h-4z" fill="currentColor"/></svg></button>
+<output id="play-time" class="play-time" aria-label="Playback time">0:00 / 0:00</output>
+<span class="control-spacer"></span>
+<button id="mute-toggle" class="icon-button" aria-label="Mute" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h4l5-5v16l-5-5H3Z" fill="currentColor"/><path class="sound-waves" d="M16 7q6 5 0 10M19 4q9 8 0 16" fill="none" stroke="currentColor" stroke-width="1.5"/><path class="muted-cross" d="m16 9 6 6m0-6-6 6" stroke="currentColor" stroke-width="1.5"/></svg></button>
+<label class="sr-only" for="playback-speed">Playback speed</label><select id="playback-speed"><option value="1">1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2×</option></select>
+<button id="fullscreen-toggle" class="icon-button" aria-label="Enter fullscreen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m6 0h6v-6" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+</div></div></div>
+<p id="player-error" class="error" role="alert" hidden>Playback could not load. Reopen the tutorial or unlock again.</p>
+<section id="chapters-section" class="chapters-section" hidden aria-labelledby="chapters-title"><h3 id="chapters-title">In this tutorial</h3><div id="chapter-list" class="chapter-list"></div></section>
+<div class="player-actions"><a id="reading-link" href="reading.html">Reading <span aria-hidden="true">↗</span></a><button id="next-button" class="text-button">Next tutorial <span aria-hidden="true">→</span></button></div>
+</div>
+<aside class="playlist" aria-label="Choose a tutorial"><div class="playlist-heading"><h2>Tutorials</h2><span>10 / 54 MIN</span></div><div id="playlist"></div><button id="lock-button" class="text-button lock-button">Lock access</button></aside>
+</section>
+<section class="film-index" id="film-index" aria-labelledby="index-title"><div class="index-heading"><h2 id="index-title">Tutorials</h2><span>10 / 54 MIN</span></div><div id="index-list"></div></section>
+<noscript><p>Please enable JavaScript to watch the tutorials. Reading is available without it.</p></noscript>
+</main>
+<footer><a href="reading.html">Reading <span aria-hidden="true">↗</span></a></footer>
+</div></body></html>

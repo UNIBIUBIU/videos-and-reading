@@ -1,7 +1,7 @@
-# Videos and Reading
+# Tutorials and Reading
 
-A two-page collection with protected videos and source-linked reading.
+Build your own AI workflow.
 
 https://unibiubiu.github.io/videos-and-reading/
 
-Video files are served by the existing password-protected media service. No password or media-access credentials are included in this repository.
+Ten password-protected tutorials, timestamped chapters, and source-linked reading. The public repository contains no video files or access credentials. Video downloads are not offered; web playback cannot prevent screen recording or technical capture.
