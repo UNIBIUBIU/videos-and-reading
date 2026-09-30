@@ -1,4 +1,4 @@
-# Aesthetic Design
+# AI Design with Precision
 
 Five password-protected lessons on precise visual prompting and album cover design.
 
